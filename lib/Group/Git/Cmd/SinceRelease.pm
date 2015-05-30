@@ -110,7 +110,7 @@ This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.1
 
 =head1 SUBROUTINES/METHODS
 
-=head2 C<since_release <$name>
+=head2 C<since_release ($name)>
 
 Calculates the number of commits since the last release (aka newest tag)
 
