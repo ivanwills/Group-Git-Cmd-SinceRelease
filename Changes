@@ -1,5 +1,16 @@
 Revision history for Group-Git-Cmd-SinceRelease
 
-0.0.1   2015-05-31
-        First version, released on an unsuspecting world.
+0.0.2   2015-07-24
+        Updating for release of version 0.0.2
+        Added coveralls config (Ivan Wills)
+        Added Perl 5.22 to list of perl versions to build with (Ivan Wills)
 
+0.0.1   2015-05-31
+        Added missing dependencies (Ivan Wills)
+        Updated manifest (Ivan Wills)
+        Fixed spelling (Ivan Wills)
+        Fixed load test (Ivan Wills)
+        Fixed POD (Ivan Wills)
+        Fixed boilerplate (Ivan Wills)
+        Added tagging for future release (Ivan Wills)
+        Added implementation (Ivan Wills)
