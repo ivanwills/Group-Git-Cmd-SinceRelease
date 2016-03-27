@@ -36,6 +36,14 @@ my $opt = Getopt::Alt->new(
     ]
 );
 
+sub _num_sort {
+    my $A = $a;
+    $A =~ s/(\d+)/sprintf "%09i", $1/egxms;
+    my $B = $b;
+    $B =~ s/(\d+)/sprintf "%09i", $1/egxms;
+    $A cmp $B;
+}
+
 sub since_release {
     my ($self, $name) = @_;
 
@@ -46,7 +54,7 @@ sub since_release {
     local $CWD = $name;
 
     # find the newest tag and count newer commits
-    my @tags = map {/(.*)$/; $1} `git tag`;
+    my @tags = sort _num_sort map {/(.*)$/; $1} `git tag | sort -n`;
     if ($opt->opt->no_release) {
         return "Never released" if !@tags;
         return;
