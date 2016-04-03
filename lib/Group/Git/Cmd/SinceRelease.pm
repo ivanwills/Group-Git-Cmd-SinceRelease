@@ -16,7 +16,7 @@ use English qw/ -no_match_vars /;
 use File::chdir;
 use Getopt::Alt;
 
-our $VERSION = version->new('0.0.3');
+our $VERSION = version->new('0.0.4');
 
 my $opt = Getopt::Alt->new(
     {
@@ -95,7 +95,7 @@ Group::Git::Cmd::SinceRelease - Gets the number of commits each repository is ah
 
 =head1 VERSION
 
-This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.3
+This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.4
 
 =head1 SYNOPSIS
 

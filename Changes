@@ -1,5 +1,10 @@
 Revision history for Group-Git-Cmd-SinceRelease
 
+0.0.4   2016-04-03
+        Updating for release of version 0.0.4
+        Updated license date (Ivan Wills)
+        Added sorting tags numerically (Ivan Wills)
+
 0.0.3   2015-08-26
         Updating for release of version 0.0.3
         Removed creation of makefile (Ivan Wills)
