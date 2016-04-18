@@ -15,6 +15,7 @@ use Data::Dumper qw/Dumper/;
 use English qw/ -no_match_vars /;
 use File::chdir;
 use Getopt::Alt;
+use Regexp::Common;
 
 our $VERSION = version->new('0.0.4');
 
@@ -38,9 +39,9 @@ my $opt = Getopt::Alt->new(
 
 sub _num_sort {
     my $A = $a;
-    $A =~ s/(\d+)/sprintf "%09i", $1/egxms;
+    $A =~ s/($RE{num}{real})/sprintf "%09f", $1/egxms;
     my $B = $b;
-    $B =~ s/(\d+)/sprintf "%09i", $1/egxms;
+    $B =~ s/($RE{num}{real})/sprintf "%09f", $1/egxms;
     $A cmp $B;
 }
 
