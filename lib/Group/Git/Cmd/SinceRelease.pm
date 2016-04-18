@@ -39,9 +39,9 @@ my $opt = Getopt::Alt->new(
 
 sub _num_sort {
     my $A = $a;
-    $A =~ s/($RE{num}{real})/sprintf "%09f", $1/egxms;
+    $A =~ s/($RE{num}{real})/sprintf "%013f", $1/egxms;
     my $B = $b;
-    $B =~ s/($RE{num}{real})/sprintf "%09f", $1/egxms;
+    $B =~ s/($RE{num}{real})/sprintf "%013f", $1/egxms;
     $A cmp $B;
 }
 
