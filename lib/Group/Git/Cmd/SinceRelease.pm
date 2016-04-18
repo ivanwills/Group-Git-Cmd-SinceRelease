@@ -100,6 +100,9 @@ This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.4
 
 =head1 SYNOPSIS
 
+   group-git since-release [(-m|--min-commits) n] [-n|--name]
+   group-git since-release --no-release
+   group-git since-release (-r|--released)
    group-git since-release [options]
 
    Options:
