@@ -118,6 +118,12 @@ This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.4
 
 =head1 DESCRIPTION
 
+The C<since-release> command reports the statuses of repositories relative to
+their last release. Usually reporting the number of releases since the last
+release but with the C<--released> option shows only with no new commits since
+the last release. Also with the C<--no-release> option only repositories with
+no tagged releases are reported.
+
 =head1 SUBROUTINES/METHODS
 
 =head2 C<since_release ($name)>
