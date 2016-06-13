@@ -12,6 +12,7 @@ my $builder = Module::Build->new(
         'File::chdir'    => 0,
         'Getopt::Alt'    => '0.3.1',
         'Moose::Role'    => '2.0',
+        'Regexp::Common' => 0,
         'version'        => 0,
     },
     build_requires => {
