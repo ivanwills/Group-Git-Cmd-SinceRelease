@@ -17,7 +17,7 @@ use File::chdir;
 use Getopt::Alt;
 use Regexp::Common;
 
-our $VERSION = version->new('0.0.4');
+our $VERSION = version->new('0.0.5');
 
 my $opt = Getopt::Alt->new(
     {
@@ -96,7 +96,7 @@ Group::Git::Cmd::SinceRelease - Gets the number of commits each repository is ah
 
 =head1 VERSION
 
-This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.4
+This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.5
 
 =head1 SYNOPSIS
 

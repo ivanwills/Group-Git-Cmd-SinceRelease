@@ -1,5 +1,14 @@
 Revision history for Group-Git-Cmd-SinceRelease
 
+0.0.5   2016-06-13
+        Updating for release of version 0.0.5
+        Added missing dependency (Ivan Wills)
+        Changed formatting numbers to be 13 characters wide (Ivan Wills)
+        Added example usage (Ivan Wills)
+        Added a description (Ivan Wills)
+        Updated manifest (Ivan Wills)
+        Changed sorting algorithm to deal with floats (Ivan Wills)
+
 0.0.4   2016-04-03
         Updating for release of version 0.0.4
         Updated license date (Ivan Wills)
