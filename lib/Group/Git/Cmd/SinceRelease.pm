@@ -66,24 +66,24 @@ sub since_release {
 
     my ($sha, $time) = split /\s+/, `git log -n 1 --format=format:'%H %at' $tags[-1]`;
 
-    my @logs  = `git log -n 100 --format=format:'%H'`;
-    my $count = -1;
+    my @logs  = `git log -n 100 --format=format:'%H %s'`;
+    my @logged;
     for my $log (@logs) {
-        $count++;
-        chomp $log;
-        last if $log eq $sha;
+        my ($log_sha) = split /\s/, $log;
+        last if $log_sha eq $sha;
+        push @logged, $log;
     }
 
     if ($opt->opt->released) {
-        return "Released!" if !$count;
+        return "Released!" if !@logged;
         return;
     }
 
-    return if $count < $opt->opt->min && !$opt->opt->verbose;
+    return if @logged < $opt->opt->min;
     my $text = $opt->opt->quiet ? '' : "Commits since last release";
     $text .= $opt->opt->name ? " ($tags[-1]): " : ': ';
 
-    return "$text$count";
+    return $text . @logged;
 }
 
 1;
