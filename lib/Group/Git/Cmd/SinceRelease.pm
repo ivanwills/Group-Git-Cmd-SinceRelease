@@ -66,13 +66,7 @@ sub since_release {
 
     my ($sha, $time) = split /\s+/, `git log -n 1 --format=format:'%H %at' $tags[-1]`;
 
-    my @logs  = `git log -n 100 --format=format:'%H %s'`;
-    my @logged;
-    for my $log (@logs) {
-        my ($log_sha, $subject) = split /\s/, $log, 2;
-        last if $log_sha && $log_sha eq $sha;
-        push @logged, "  $subject";
-    }
+    my @logged = `git log -n 100 --format=format:'  %s' $sha..HEAD`;
 
     if ($opt->opt->released) {
         return "Released!" if !@logged;
