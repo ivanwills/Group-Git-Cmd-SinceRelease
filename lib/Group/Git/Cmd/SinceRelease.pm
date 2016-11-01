@@ -69,9 +69,9 @@ sub since_release {
     my @logs  = `git log -n 100 --format=format:'%H %s'`;
     my @logged;
     for my $log (@logs) {
-        my ($log_sha) = split /\s/, $log;
-        last if $log_sha eq $sha;
-        push @logged, $log;
+        my ($log_sha, $subject) = split /\s/, $log, 2;
+        last if $log_sha && $log_sha eq $sha;
+        push @logged, "  $subject";
     }
 
     if ($opt->opt->released) {
@@ -83,7 +83,7 @@ sub since_release {
     my $text = $opt->opt->quiet ? '' : "Commits since last release";
     $text .= $opt->opt->name ? " ($tags[-1]): " : ': ';
 
-    return $text . @logged;
+    return $text . ($opt->opt->verbose ? "\n" . join '', @logged : scalar @logged);
 }
 
 1;
