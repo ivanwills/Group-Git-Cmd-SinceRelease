@@ -45,12 +45,14 @@ sub _num_sort {
     $A cmp $B;
 }
 
+sub since_release_start {
+    $opt->process;
+}
+
 sub since_release {
     my ($self, $name) = @_;
 
     return unless -d $name;
-
-    $opt->process if !%{ $opt->opt || {} };
 
     local $CWD = $name;
 
