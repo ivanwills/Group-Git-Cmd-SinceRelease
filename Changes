@@ -1,5 +1,16 @@
 Revision history for Group-Git-Cmd-SinceRelease
 
+0.0.6   2016-11-06
+        Updating for release of version 0.0.6
+        Added missing docs (Ivan Wills)
+        Moved command processing to start function (Ivan Wills)
+        Allowing for log format to be passed (Ivan Wills)
+        Fixed so that getting logs only get what is needed (Ivan Wills)
+        Adding verbose option to show log messages since last release (Ivan Wills)
+        Re-organising getting log status (Ivan Wills)
+        Added perl 5.24 to travis build (Ivan Wills)
+        Added perl 5.24 to travis build (Ivan Wills)
+
 0.0.5   2016-06-13
         Updating for release of version 0.0.5
         Added missing dependency (Ivan Wills)
