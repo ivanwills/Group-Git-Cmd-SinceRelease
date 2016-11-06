@@ -126,6 +126,10 @@ no tagged releases are reported.
 
 =head1 SUBROUTINES/METHODS
 
+=head2 C<since_release_start ()>
+
+Initializes command line parameters.
+
 =head2 C<since_release ($name)>
 
 Calculates the number of commits since the last release (via the newest tag)
