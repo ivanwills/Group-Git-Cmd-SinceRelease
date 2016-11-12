@@ -47,6 +47,7 @@ sub _num_sort {
 
 sub since_release_start {
     $opt->process;
+    return;
 }
 
 sub since_release {
