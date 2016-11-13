@@ -1,5 +1,9 @@
 Revision history for Group-Git-Cmd-SinceRelease
 
+0.0.7   2016-11-13
+        Updating for release of version 0.0.7
+        Stopping printing result of process (Ivan Wills)
+
 0.0.6   2016-11-06
         Updating for release of version 0.0.6
         Added missing docs (Ivan Wills)
