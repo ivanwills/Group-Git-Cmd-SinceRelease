@@ -15,7 +15,6 @@ use Data::Dumper qw/Dumper/;
 use English qw/ -no_match_vars /;
 use File::chdir;
 use Getopt::Alt;
-use Regexp::Common;
 
 our $VERSION = version->new('0.0.7');
 
@@ -39,9 +38,9 @@ my $opt = Getopt::Alt->new(
 
 sub _num_sort {
     my $A = $a;
-    $A =~ s/($RE{num}{real})/sprintf "%013f", $1/egxms;
+    $A =~ s/(\d+)/sprintf "%013d", $1/egxms;
     my $B = $b;
-    $B =~ s/($RE{num}{real})/sprintf "%013f", $1/egxms;
+    $B =~ s/(\d+)/sprintf "%013d", $1/egxms;
     $A cmp $B;
 }
 
@@ -78,7 +77,7 @@ sub since_release {
     }
 
     return if @logged < $opt->opt->min;
-    my $text = $opt->opt->quiet ? '' : "Commits since last release";
+    my $text = $opt->opt->quiet ? '' : "Commits since last release ($tags[-1])";
     $text .= $opt->opt->name ? " ($tags[-1]): " : ': ';
 
     return $text . ($opt->opt->verbose ? "\n" . join '', @logged : scalar @logged);
