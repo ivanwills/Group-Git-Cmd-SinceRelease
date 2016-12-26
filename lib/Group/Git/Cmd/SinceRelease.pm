@@ -16,7 +16,7 @@ use English qw/ -no_match_vars /;
 use File::chdir;
 use Getopt::Alt;
 
-our $VERSION = version->new('0.0.7');
+our $VERSION = version->new('0.0.8');
 
 my $opt = Getopt::Alt->new(
     {
@@ -65,6 +65,7 @@ sub since_release {
     elsif (!@tags) {
         return;
     }
+    warn join ', ', @tags, "\n";
 
     my ($sha, $time) = split /\s+/, `git log -n 1 --format=format:'%H %at' $tags[-1]`;
 
@@ -93,7 +94,7 @@ Group::Git::Cmd::SinceRelease - Gets the number of commits each repository is ah
 
 =head1 VERSION
 
-This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.7
+This documentation refers to Group::Git::Cmd::SinceRelease version 0.0.8
 
 =head1 SYNOPSIS
 

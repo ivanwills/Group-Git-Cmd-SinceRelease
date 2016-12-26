@@ -1,5 +1,11 @@
 Revision history for Group-Git-Cmd-SinceRelease
 
+0.0.8   2016-12-26
+        Updating for release of version 0.0.8
+        Removed unused dependency (Ivan Wills)
+        Removed incorrect use of Regexp::Common (Ivan Wills)
+        fixed name (Ivan Wills)
+
 0.0.7   2016-11-13
         Updating for release of version 0.0.7
         Stopping printing result of process (Ivan Wills)
