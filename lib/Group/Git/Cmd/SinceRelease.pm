@@ -65,7 +65,6 @@ sub since_release {
     elsif (!@tags) {
         return;
     }
-    warn join ', ', @tags, "\n";
 
     my ($sha, $time) = split /\s+/, `git log -n 1 --format=format:'%H %at' $tags[-1]`;
 
