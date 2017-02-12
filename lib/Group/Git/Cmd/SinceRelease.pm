@@ -68,7 +68,7 @@ sub since_release {
 
     my ($sha, $time) = split /\s+/, `git log -n 1 --format=format:'%H %at' $tags[-1]`;
 
-    my $format = @ARGV ? join(' ', @ARGV) : '--format=format"  %s"';
+    my $format = @ARGV ? join(' ', @ARGV) : '--format=format:"  %s"';
     my @logged = `git log -n 100 $format $sha..HEAD`;
 
     if ($opt->opt->released) {
