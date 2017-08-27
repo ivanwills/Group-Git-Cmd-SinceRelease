@@ -5,12 +5,12 @@ default:
   wait: 0
 editor:
   files:
-    eg:
-      - some-file.eg
+    lib:
+      - lib/Group/Git/Cmd/SinceRelease.pm
 name: group-git-cmd-since-release
 terminals:
-  2: []
-
+  2:
+    edit: lib
   3: []
 
   4: []
