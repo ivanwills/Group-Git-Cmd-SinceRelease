@@ -85,7 +85,13 @@ sub since_release {
         return $tags[-1];
     }
 
-    my ($sha, $time) = split /\s+/, `git log -n 1 --format=format:'%H %at' $tags[-1]`;
+    my ($sha, $time, @rest) = split /\s+/, `git log -n 1 --format=format:'%H %at' $tags[-1]`;
+
+    if (!$sha) {
+        warn "$name\ngit log -n 1 --format=format:'%H %at' $tags[-1]\n\n";
+        warn join ' ', $sha, $time, @rest;
+        return;
+    }
 
     my $format = @ARGV ? join(' ', @ARGV) : '--format=format:"  %s"';
     my @logged = `git log -n 100 $format $sha..HEAD`;
