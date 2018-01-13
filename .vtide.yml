@@ -9,6 +9,14 @@ editor:
       - lib/Group/Git/Cmd/SinceRelease.pm
 name: group-git-cmd-since-release
 terminals:
+  1a:
+    command: ./Build && ./Build testcover
+    restart: 1
+    wait: 0
+    watch:
+      - lib
+      - bin
+      - tests
   2:
     edit: lib
   3: []
