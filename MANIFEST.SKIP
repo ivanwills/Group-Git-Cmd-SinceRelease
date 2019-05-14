@@ -98,3 +98,4 @@ vrc.yml
 tmp*
 temp*
 .vtide/start.log
+MANIFEST.SKIP
