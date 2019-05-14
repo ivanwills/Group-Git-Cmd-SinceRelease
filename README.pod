@@ -3,6 +3,8 @@
 <a href="https://travis-ci.org/ivanwills/Group-Git-Cmd-SinceRelease?branch=master"><img src="https://travis-ci.org/ivanwills/Group-Git-Cmd-SinceRelease.png?branch=master" alt="Group-Git-Cmd-SinceRelease"></a>
 <a href="https://coveralls.io/r/ivanwills/Group-Git-Cmd-SinceRelease?branch=master"><img src="https://coveralls.io/repos/ivanwills/Group-Git-Cmd-SinceRelease/badge.svg?branch=master" alt="Coverage Status" /></a>
 
+=end html
+
 =head1 Group::Git::Cmd::SinceRelease
 
 Provides the L<Group::Git> sub sommand since-release which gets the number
